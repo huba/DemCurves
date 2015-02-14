@@ -2,12 +2,13 @@
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-Gem::Specification.new do |gem|
-  gem.name = 'DemCurves'
-  gem.version = '0.0.1'
-  gem.author = 'Huba Nagy'
-  gem.email = '12huba@gmail.com'
+Gem::Specification.new do |spec|
+  spec.name = 'dem-curves'
+  spec.version = '0.0.1'
+  spec.summary = 'A library for generating bezier curve based paths from control_points. It can be used with Rubygame'
+  spec.author = 'Huba Nagy'
+  spec.email = '12huba@gmail.com'
   
-  gem.files = 'git ls-files'.split($/)
-  gem.require_paths = ['lib']
+  spec.files = 'git ls-files'.split($/)
+  spec.require_paths = ['lib']
 end
