@@ -6,6 +6,7 @@ Gem::Specification.new do |spec|
   spec.summary = 'A library for generating bezier curve based paths from control_points. It can be used with Rubygame'
   spec.author = 'Huba Nagy'
   spec.email = '12huba@gmail.com'
+  spec.homepage = 'https://github.com/huba/DemCurves'
   spec.license = 'MIT'
   
   spec.files = Dir['lib/*.rb'] 
