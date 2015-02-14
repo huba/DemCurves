@@ -1,5 +1,6 @@
 DemCurves
 =========
+[![Gem Version](https://badge.fury.io/rb/dem-curves.svg)](http://badge.fury.io/rb/dem-curves)
 
 A library for generating bezier curve based paths from control_points. It can be used with Rubygame
 when Rubygame is installed along with SDL_GFX.
