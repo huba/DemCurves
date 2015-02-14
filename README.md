@@ -1,12 +1,55 @@
-DemCurves
-=========
+# DemCurves
 [![Gem Version](https://badge.fury.io/rb/dem-curves.svg)](http://badge.fury.io/rb/dem-curves)
 
-A library for generating bezier curve based paths from control_points. It can be used with Rubygame
-when Rubygame is installed along with SDL_GFX.
+A library for generating bezier curve based paths from control_points. It can be used with Rubygame when Rubygame is installed along with SDL_GFX.
 
-License
--------
+## Installation
+
+### Development version from github
+Clone the repository:
+```
+git clone https://github.com/huba/DemCurves.git
+```
+
+Then build the gem:
+```
+gem build DemCurves.gemspec
+```
+And install:
+```
+gem install dem-curves-x.x.x.gem
+```
+
+### Latest release from rubygems.org
+Simply run:
+```
+gem install dem-curves
+```
+
+## Basic usage
+The simplest way to use the library is to use it without a graphical front end this will output 32 ruby Vector objects.
+```ruby
+require 'dem-curves'
+
+path = DemCurves::Path.new [50, 50]
+path.add_bezier [100, 80], [150, 130], [200, 230]
+
+path.each do |path_point|
+  puts path_point
+end
+```
+
+The ```DemCurves::RubygameUtils``` module describes draggable handles that can be attached to the path's control points and the library also extends ```Rubygame::Surface``` with a ```draw_path``` function which takes an instance of ```DemCurves::Path``` and a color and it draws lines between all the points on the surface.
+
+## Contributing
+
+1. Fork it
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create new Pull Request
+
+## License
 The MIT License (MIT)
 
 Copyright (c) 2014 Huba Z. Nagy
